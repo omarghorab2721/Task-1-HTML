@@ -1,0 +1,293 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------- Header ---------------------------------- */
+.header {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    z-index: 3;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* --------------------------------- Header logo -------------------------------------- */
+.header .logo {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 55px;
+    position: absolute;
+    left: 70px;
+    top: 6px;
+    transition: 1s;
+}
+
+.header .logo:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.header .logo span {
+    color: rgb(202, 54, 8);
+}
+
+.header .logo h5 {
+    color: darkorange;
+}
+
+/* -------------------------------- navigation ---------------------------------- */
+.header .nav {
+    position: absolute;
+    right: 60px;
+    top: 27px;
+    font-size: 25px;
+}
+
+.header .nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header .nav ul li a {
+    font-family: 'Patrick Hand', cursive;
+    color: grey;
+}
+
+.header .nav ul li a:hover {
+    color: darkorange;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* ------------------ Body ------------------- */
+.body {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    position: relative;
+    top: 90px;
+}
+
+/* ----------------- Main img ------------------- */
+.body .mainimg {
+    height: 400px;
+    width: 60%;
+    background-image: url(https://razorpay.com/blog-content/uploads/2020/05/Feature-Image.png);
+    background-size: 100% 100%;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.body .mainimg:hover {
+    animation-name: img;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+/* ---------------- side images ------------------- */
+.body .imgs {
+    text-align: center;
+}
+
+.body .imgs img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.body .imgs img:hover {
+    height: 220px;
+    width: 220px;
+    transition: 0.5s;
+}
+
+/* ------------------------ Content ---------------------- */
+.body .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.body .content div {
+    width: 30%;
+    position: relative;
+}
+
+.body .content img {
+    width: 40px;
+    border-radius: 20px;
+}
+
+.body .content h1 {
+    margin-top: 0px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.body .content p {
+    font-family: 'Lobster', cursive;
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ---------------------- footer --------------- */
+.body .lines {
+    height: 0px;
+    border: dashed 4px;
+    color: grey;
+    margin-top: 40px;
+}
+
+.body .footer {
+    width: 80%;
+    margin: auto;
+    height: 300px;
+    background-color: rgb(255, 136, 0);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.body .footer div {
+    width: 35%;
+    margin-top: 40px;
+}
+
+.body .footer div h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.body .footer div p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* --------------- Animations ----------------------- */
+@keyframes img {
+    16% {
+        background-image: url(../image/1.jpg);
+    }
+
+    32% {
+        background-image: url(../image/2.jpg);
+    }
+
+    48% {
+        background-image: url(../image/3.jpg);
+    }
+
+    65% {
+        background-image: url(../image/4.jpg);
+    }
+
+    82% {
+        background-image: url(../image/5.jpg);
+    }
+
+    100% {
+        background-image: url(../image/6.jpg);
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* ----------------------- Mobile CSS --------------------------- */
+
+@media (max-width : 750px) {
+                /* Header */
+                /* Logo */
+    .header{
+        height: auto;
+    }
+
+    .header .logo{
+        font-size: 45px;
+        left: 10px;
+    }
+
+    .header .nav{
+        margin-top: 150px;
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+    }
+    .header .nav li{
+        border: darkorange 1px;
+    }
+
+    .body .mainimg{
+        width: 85%;
+        height: 100px;
+    }
+
+    .body .imgs img{
+        width: 32%;
+        height: 100px;
+        text-align: center;
+    }
+
+    .body .content{
+        flex-wrap: wrap;
+    }
+    
+    .body .content div{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(230, 224, 224);
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .body .content img{
+        width: 40px;
+    }
+
+    .body .content h1{
+        font-size: 25px;
+        left: 0px;
+        color: darkorange;
+    }
+
+    .body .content p{
+        font-size: 15px;
+        margin: 0px 30px;
+        margin-bottom: 30px;
+    }
+
+    .body .footer{
+        height: 500px;
+        flex-wrap: wrap;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 90%;
+    }
+
+    .body .footer div{
+        width: 100%;
+        text-align: center;
+        padding: 0px 30px;
+    }
+
+    .body .footer h1{
+        font-size: 25px;
+    }
+}
